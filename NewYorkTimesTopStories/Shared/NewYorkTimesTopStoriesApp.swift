@@ -2,7 +2,7 @@
 //  NewYorkTimesTopStoriesApp.swift
 //  Shared
 //
-//  Created by ZALORA_USER on 06/06/2022.
+//  Created by Mahika on 06/06/2022.
 //
 
 import SwiftUI
