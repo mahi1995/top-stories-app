@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct TopStoryCellViewModel: CellViewModelProtocol {
-    var cellType: CellType = .story
-}
-
 protocol HomePageProtocol: AnyObject {
     func didReceiveData()
 }
