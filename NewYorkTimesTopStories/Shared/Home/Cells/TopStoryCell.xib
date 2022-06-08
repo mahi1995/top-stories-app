@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="storyCell" id="LoY-SG-VnV" customClass="TopStoryCell" customModule="NewYorkTimesTopStories" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="205"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="805-fT-UC5">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="205"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-2S-Rt1" userLabel="ContainerView">
+                        <rect key="frame" x="5" y="5" width="367" height="195"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bkD-1Y-iu8" userLabel="ImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="367" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="R7e-Ij-rDJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIM-i4-cdi" userLabel="Title Label">
+                                <rect key="frame" x="16" y="138" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCB-Ne-NzA" userLabel="Author Label">
+                                <rect key="frame" x="16" y="166.5" width="335" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eCB-Ne-NzA" firstAttribute="leading" secondItem="pUU-2S-Rt1" secondAttribute="leading" constant="16" id="3rx-ir-rvE"/>
+                            <constraint firstItem="VIM-i4-cdi" firstAttribute="top" secondItem="bkD-1Y-iu8" secondAttribute="bottom" constant="10" id="DuK-5S-ONj"/>
+                            <constraint firstItem="bkD-1Y-iu8" firstAttribute="top" secondItem="pUU-2S-Rt1" secondAttribute="top" id="I3O-de-ur6"/>
+                            <constraint firstItem="bkD-1Y-iu8" firstAttribute="leading" secondItem="pUU-2S-Rt1" secondAttribute="leading" id="OeT-PG-ksH"/>
+                            <constraint firstItem="bkD-1Y-iu8" firstAttribute="centerX" secondItem="pUU-2S-Rt1" secondAttribute="centerX" id="egC-Sa-tvm"/>
+                            <constraint firstAttribute="trailing" secondItem="eCB-Ne-NzA" secondAttribute="trailing" constant="16" id="fHQ-KQ-qtY"/>
+                            <constraint firstItem="eCB-Ne-NzA" firstAttribute="top" secondItem="VIM-i4-cdi" secondAttribute="bottom" constant="8" id="lQJ-Qt-D35"/>
+                            <constraint firstAttribute="trailing" secondItem="VIM-i4-cdi" secondAttribute="trailing" constant="16" id="m0e-X4-WLb"/>
+                            <constraint firstItem="VIM-i4-cdi" firstAttribute="leading" secondItem="pUU-2S-Rt1" secondAttribute="leading" constant="16" id="und-wz-nyr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pUU-2S-Rt1" firstAttribute="top" secondItem="805-fT-UC5" secondAttribute="top" constant="5" id="0vl-Bq-qhs"/>
+                    <constraint firstAttribute="bottom" secondItem="pUU-2S-Rt1" secondAttribute="bottom" constant="5" id="8bs-WY-MPp"/>
+                    <constraint firstAttribute="trailing" secondItem="pUU-2S-Rt1" secondAttribute="trailing" constant="5" id="8h3-EF-srk"/>
+                    <constraint firstItem="pUU-2S-Rt1" firstAttribute="leading" secondItem="805-fT-UC5" secondAttribute="leading" constant="5" id="FcV-Y2-1Kl"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="377" height="205"/>
+            <connections>
+                <outlet property="authorLabel" destination="eCB-Ne-NzA" id="c9i-il-1OX"/>
+                <outlet property="containerView" destination="pUU-2S-Rt1" id="0zP-iq-WzN"/>
+                <outlet property="imageView" destination="bkD-1Y-iu8" id="3fG-3L-cFx"/>
+                <outlet property="titleLabel" destination="VIM-i4-cdi" id="LK8-Cx-cTa"/>
+            </connections>
+            <point key="canvasLocation" x="431.15942028985512" y="91.40625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image_placeholder" width="75" height="75"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

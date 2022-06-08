@@ -11,6 +11,10 @@
 		928EC7DF285135430039E811 /* EmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928EC7DE285135430039E811 /* EmptyViewCell.xib */; };
 		928EC7E128513D830039E811 /* EmptyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7E028513D830039E811 /* EmptyCellViewModel.swift */; };
 		928EC7E3285147200039E811 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7E2285147200039E811 /* Home.swift */; };
+		928EC7E5285148E10039E811 /* TopStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7E4285148E10039E811 /* TopStoryCell.swift */; };
+		928EC7E7285149250039E811 /* TopStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928EC7E6285149250039E811 /* TopStoryCell.xib */; };
+		928EC7EA285165C40039E811 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7E9285165C40039E811 /* UIColor+Extension.swift */; };
+		928EC7EC285167100039E811 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7EB285167100039E811 /* UIView+Extension.swift */; };
 		92A28263284EBEE50075F4C5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28262284EBEE50075F4C5 /* Tests_iOS.swift */; };
 		92A28265284EBEE50075F4C5 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28264284EBEE50075F4C5 /* Tests_iOSLaunchTests.swift */; };
 		92A28272284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2824A284EBEE30075F4C5 /* NewYorkTimesTopStoriesApp.swift */; };
@@ -51,6 +55,10 @@
 		928EC7DE285135430039E811 /* EmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewCell.xib; sourceTree = "<group>"; };
 		928EC7E028513D830039E811 /* EmptyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCellViewModel.swift; sourceTree = "<group>"; };
 		928EC7E2285147200039E811 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		928EC7E4285148E10039E811 /* TopStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoryCell.swift; sourceTree = "<group>"; };
+		928EC7E6285149250039E811 /* TopStoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopStoryCell.xib; sourceTree = "<group>"; };
+		928EC7E9285165C40039E811 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		928EC7EB285167100039E811 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		92A2824A284EBEE30075F4C5 /* NewYorkTimesTopStoriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkTimesTopStoriesApp.swift; sourceTree = "<group>"; };
 		92A2824B284EBEE30075F4C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92A2824C284EBEE50075F4C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,8 +112,19 @@
 				928EC7DC2851350D0039E811 /* EmptyViewCell.swift */,
 				928EC7DE285135430039E811 /* EmptyViewCell.xib */,
 				928EC7E028513D830039E811 /* EmptyCellViewModel.swift */,
+				928EC7E4285148E10039E811 /* TopStoryCell.swift */,
+				928EC7E6285149250039E811 /* TopStoryCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		928EC7E8285165B30039E811 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				928EC7E9285165C40039E811 /* UIColor+Extension.swift */,
+				928EC7EB285167100039E811 /* UIView+Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		92A28244284EBEE30075F4C5 = {
@@ -120,6 +139,7 @@
 		92A28249284EBEE30075F4C5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				928EC7E8285165B30039E811 /* Utils */,
 				92A2828C284ED4BD0075F4C5 /* Home */,
 				92A2824A284EBEE30075F4C5 /* NewYorkTimesTopStoriesApp.swift */,
 				92A2824B284EBEE30075F4C5 /* ContentView.swift */,
@@ -287,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A28276284EBEE50075F4C5 /* Assets.xcassets in Resources */,
+				928EC7E7285149250039E811 /* TopStoryCell.xib in Resources */,
 				92A2828E284ED4E10075F4C5 /* HomeViewController.xib in Resources */,
 				928EC7DF285135430039E811 /* EmptyViewCell.xib in Resources */,
 			);
@@ -322,14 +343,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928EC7EC285167100039E811 /* UIView+Extension.swift in Sources */,
 				92A28287284ED3690075F4C5 /* HomePage.swift in Sources */,
 				928EC7E128513D830039E811 /* EmptyCellViewModel.swift in Sources */,
+				928EC7E5285148E10039E811 /* TopStoryCell.swift in Sources */,
 				928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */,
 				92A28274284EBEE50075F4C5 /* ContentView.swift in Sources */,
 				92A28272284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */,
 				92D0C93128505ED900543A3D /* HomeViewModel.swift in Sources */,
 				928EC7E3285147200039E811 /* Home.swift in Sources */,
 				92A2828A284ED39F0075F4C5 /* HomeViewController.swift in Sources */,
+				928EC7EA285165C40039E811 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

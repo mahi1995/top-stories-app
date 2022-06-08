@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        viewModel.delegate = self
     }
 }
 
@@ -36,6 +37,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellViewModel = viewModel.itemAt(indexPath: indexPath)
         return collectionView.dequeueReusableCell(withReuseIdentifier: cellViewModel.cellType.identifier, for: indexPath)
+    }
+    
+}
+
+extension HomeViewController: HomePageProtocol {
+    func didReceiveData() {
+        collectionView.reloadData()
     }
     
 }

@@ -22,6 +22,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-JY-SAX" userLabel="TitleView">
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sah-lk-X6g" userLabel="LineView">
+                            <rect key="frame" x="0.0" y="48" width="414" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="iNt-YD-T6M"/>
+                            </constraints>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_york_times_full" translatesAutoresizingMaskIntoConstraints="NO" id="6x2-9a-tcZ">
                             <rect key="frame" x="87" y="10" width="240" height="30"/>
                             <constraints>
@@ -31,9 +38,12 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Sah-lk-X6g" secondAttribute="trailing" id="DQH-Zz-nkw"/>
                         <constraint firstAttribute="height" constant="50" id="Ed7-7E-uqv"/>
                         <constraint firstAttribute="bottom" secondItem="6x2-9a-tcZ" secondAttribute="bottom" constant="10" id="Rly-ek-izh"/>
                         <constraint firstItem="6x2-9a-tcZ" firstAttribute="top" secondItem="Ssb-JY-SAX" secondAttribute="top" constant="10" id="cIc-32-TmD"/>
+                        <constraint firstAttribute="bottom" secondItem="Sah-lk-X6g" secondAttribute="bottom" constant="1" id="tY4-Rc-XaM"/>
+                        <constraint firstItem="Sah-lk-X6g" firstAttribute="leading" secondItem="Ssb-JY-SAX" secondAttribute="leading" id="xiJ-f1-6MA"/>
                         <constraint firstItem="6x2-9a-tcZ" firstAttribute="centerX" secondItem="Ssb-JY-SAX" secondAttribute="centerX" id="yy0-yu-fvu"/>
                     </constraints>
                 </view>
