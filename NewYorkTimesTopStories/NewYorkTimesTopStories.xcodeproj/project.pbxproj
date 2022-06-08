@@ -19,6 +19,8 @@
 		92A28288284ED3690075F4C5 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28286284ED3690075F4C5 /* HomePage.swift */; };
 		92A2828A284ED39F0075F4C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28289284ED39F0075F4C5 /* HomeViewController.swift */; };
 		92A2828B284ED39F0075F4C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28289284ED39F0075F4C5 /* HomeViewController.swift */; };
+		92A2828E284ED4E10075F4C5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A2828D284ED4E10075F4C5 /* HomeViewController.xib */; };
+		92A2828F284ED4E10075F4C5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A2828D284ED4E10075F4C5 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		92A2826A284EBEE50075F4C5 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A28286284ED3690075F4C5 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		92A28289284ED39F0075F4C5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		92A2828D284ED4E10075F4C5 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +99,10 @@
 		92A28249284EBEE30075F4C5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				92A2828C284ED4BD0075F4C5 /* Home */,
 				92A2824A284EBEE30075F4C5 /* NewYorkTimesTopStoriesApp.swift */,
 				92A2824B284EBEE30075F4C5 /* ContentView.swift */,
 				92A2824C284EBEE50075F4C5 /* Assets.xcassets */,
-				92A28286284ED3690075F4C5 /* HomePage.swift */,
-				92A28289284ED39F0075F4C5 /* HomeViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -123,6 +125,16 @@
 				92A28264284EBEE50075F4C5 /* Tests_iOSLaunchTests.swift */,
 			);
 			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		92A2828C284ED4BD0075F4C5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				92A28286284ED3690075F4C5 /* HomePage.swift */,
+				92A28289284ED39F0075F4C5 /* HomeViewController.swift */,
+				92A2828D284ED4E10075F4C5 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A28276284EBEE50075F4C5 /* Assets.xcassets in Resources */,
+				92A2828E284ED4E10075F4C5 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A28277284EBEE50075F4C5 /* Assets.xcassets in Resources */,
+				92A2828F284ED4E10075F4C5 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
