@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7DC2851350D0039E811 /* EmptyViewCell.swift */; };
+		928EC7DF285135430039E811 /* EmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928EC7DE285135430039E811 /* EmptyViewCell.xib */; };
+		928EC7E128513D830039E811 /* EmptyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7E028513D830039E811 /* EmptyCellViewModel.swift */; };
+		928EC7E3285147200039E811 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7E2285147200039E811 /* Home.swift */; };
 		92A28263284EBEE50075F4C5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28262284EBEE50075F4C5 /* Tests_iOS.swift */; };
 		92A28265284EBEE50075F4C5 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28264284EBEE50075F4C5 /* Tests_iOSLaunchTests.swift */; };
 		92A28272284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2824A284EBEE30075F4C5 /* NewYorkTimesTopStoriesApp.swift */; };
@@ -21,6 +25,8 @@
 		92A2828B284ED39F0075F4C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28289284ED39F0075F4C5 /* HomeViewController.swift */; };
 		92A2828E284ED4E10075F4C5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A2828D284ED4E10075F4C5 /* HomeViewController.xib */; };
 		92A2828F284ED4E10075F4C5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A2828D284ED4E10075F4C5 /* HomeViewController.xib */; };
+		92D0C93128505ED900543A3D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0C93028505ED900543A3D /* HomeViewModel.swift */; };
+		92D0C93228505ED900543A3D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0C93028505ED900543A3D /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		928EC7DC2851350D0039E811 /* EmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewCell.swift; sourceTree = "<group>"; };
+		928EC7DE285135430039E811 /* EmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewCell.xib; sourceTree = "<group>"; };
+		928EC7E028513D830039E811 /* EmptyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCellViewModel.swift; sourceTree = "<group>"; };
+		928EC7E2285147200039E811 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		92A2824A284EBEE30075F4C5 /* NewYorkTimesTopStoriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkTimesTopStoriesApp.swift; sourceTree = "<group>"; };
 		92A2824B284EBEE30075F4C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92A2824C284EBEE50075F4C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +63,7 @@
 		92A28286284ED3690075F4C5 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		92A28289284ED39F0075F4C5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92A2828D284ED4E10075F4C5 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		92D0C93028505ED900543A3D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		928EC7DB285135010039E811 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				928EC7DC2851350D0039E811 /* EmptyViewCell.swift */,
+				928EC7DE285135430039E811 /* EmptyViewCell.xib */,
+				928EC7E028513D830039E811 /* EmptyCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		92A28244284EBEE30075F4C5 = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +151,12 @@
 		92A2828C284ED4BD0075F4C5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				928EC7DB285135010039E811 /* Cells */,
+				928EC7E2285147200039E811 /* Home.swift */,
 				92A28286284ED3690075F4C5 /* HomePage.swift */,
 				92A28289284ED39F0075F4C5 /* HomeViewController.swift */,
 				92A2828D284ED4E10075F4C5 /* HomeViewController.xib */,
+				92D0C93028505ED900543A3D /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -264,6 +288,7 @@
 			files = (
 				92A28276284EBEE50075F4C5 /* Assets.xcassets in Resources */,
 				92A2828E284ED4E10075F4C5 /* HomeViewController.xib in Resources */,
+				928EC7DF285135430039E811 /* EmptyViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A28287284ED3690075F4C5 /* HomePage.swift in Sources */,
+				928EC7E128513D830039E811 /* EmptyCellViewModel.swift in Sources */,
+				928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */,
 				92A28274284EBEE50075F4C5 /* ContentView.swift in Sources */,
 				92A28272284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */,
+				92D0C93128505ED900543A3D /* HomeViewModel.swift in Sources */,
+				928EC7E3285147200039E811 /* Home.swift in Sources */,
 				92A2828A284ED39F0075F4C5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +340,7 @@
 				92A28288284ED3690075F4C5 /* HomePage.swift in Sources */,
 				92A28275284EBEE50075F4C5 /* ContentView.swift in Sources */,
 				92A28273284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */,
+				92D0C93228505ED900543A3D /* HomeViewModel.swift in Sources */,
 				92A2828B284ED39F0075F4C5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
