@@ -33,6 +33,8 @@
 		92A2828B284ED39F0075F4C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A28289284ED39F0075F4C5 /* HomeViewController.swift */; };
 		92A2828E284ED4E10075F4C5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A2828D284ED4E10075F4C5 /* HomeViewController.xib */; };
 		92A2828F284ED4E10075F4C5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A2828D284ED4E10075F4C5 /* HomeViewController.xib */; };
+		92BAA6492853DEF700CCECF1 /* TopStoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BAA6482853DEF700CCECF1 /* TopStoriesAPI.swift */; };
+		92BAA64A2853DEF700CCECF1 /* TopStoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BAA6482853DEF700CCECF1 /* TopStoriesAPI.swift */; };
 		92D0C93128505ED900543A3D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0C93028505ED900543A3D /* HomeViewModel.swift */; };
 		92D0C93228505ED900543A3D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0C93028505ED900543A3D /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,7 @@
 		92A28286284ED3690075F4C5 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		92A28289284ED39F0075F4C5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92A2828D284ED4E10075F4C5 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		92BAA6482853DEF700CCECF1 /* TopStoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesAPI.swift; sourceTree = "<group>"; };
 		92D0C93028505ED900543A3D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +165,7 @@
 				928EC7E8285165B30039E811 /* Utils */,
 				92A2828C284ED4BD0075F4C5 /* Home */,
 				92A2824A284EBEE30075F4C5 /* NewYorkTimesTopStoriesApp.swift */,
+				92BAA6482853DEF700CCECF1 /* TopStoriesAPI.swift */,
 				92A2824B284EBEE30075F4C5 /* ContentView.swift */,
 				92A2824C284EBEE50075F4C5 /* Assets.xcassets */,
 			);
@@ -372,6 +376,7 @@
 				928EC7F52851BE4B0039E811 /* LoadingIndicatorCellViewModel.swift in Sources */,
 				928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */,
 				92A28274284EBEE50075F4C5 /* ContentView.swift in Sources */,
+				92BAA6492853DEF700CCECF1 /* TopStoriesAPI.swift in Sources */,
 				92A28272284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */,
 				92D0C93128505ED900543A3D /* HomeViewModel.swift in Sources */,
 				928EC7E3285147200039E811 /* Home.swift in Sources */,
@@ -387,6 +392,7 @@
 			files = (
 				92A28288284ED3690075F4C5 /* HomePage.swift in Sources */,
 				92A28275284EBEE50075F4C5 /* ContentView.swift in Sources */,
+				92BAA64A2853DEF700CCECF1 /* TopStoriesAPI.swift in Sources */,
 				92A28273284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */,
 				92D0C93228505ED900543A3D /* HomeViewModel.swift in Sources */,
 				92A2828B284ED39F0075F4C5 /* HomeViewController.swift in Sources */,
