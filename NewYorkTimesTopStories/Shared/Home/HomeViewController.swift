@@ -20,12 +20,29 @@ class HomeViewController: UIViewController {
         }
     }
     private let viewModel = HomeViewModel()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.alwaysBounceVertical = true
+        refreshControl.tintColor = .lightGray
+        refreshControl.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
         viewModel.delegate = self
+    }
+    
+    @objc func handleRefresh(refreshControl: UIRefreshControl) {
+        DispatchQueue.global().async {
+            // Fake background loading task
+            sleep(2)
+            // Refresh the data here
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                refreshControl.endRefreshing()
+            }
+        }
     }
 }
 
@@ -43,6 +60,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: HomePageProtocol {
     func didReceiveData() {
+        collectionView.reloadData()
+    }
+    
+    func onLoadingData() {
         collectionView.reloadData()
     }
     

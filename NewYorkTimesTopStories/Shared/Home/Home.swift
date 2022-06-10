@@ -12,6 +12,7 @@ protocol CellViewModelProtocol {
 enum CellType: String, CaseIterable {
     case story = "storyCell"
     case empty = "emptyCell"
+    case loading = "loadingCell"
     
     var nibName: String {
         switch self {
@@ -19,6 +20,8 @@ enum CellType: String, CaseIterable {
             return "TopStoryCell"
         case .empty:
             return "EmptyViewCell"
+        case .loading:
+            return "LoadingIndicatorCell"
         }
     }
     

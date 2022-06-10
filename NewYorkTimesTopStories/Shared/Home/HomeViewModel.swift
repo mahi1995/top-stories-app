@@ -8,6 +8,7 @@
 import Foundation
 
 protocol HomePageProtocol: AnyObject {
+    func onLoadingData()
     func didReceiveData()
 }
 
@@ -27,6 +28,8 @@ class HomeViewModel {
     }
     
     func loadStories() {
+        cells = [LoadingIndicatorCellViewModel()]
+        delegate?.onLoadingData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) { [weak self] in
             self?.cells = [TopStoryCellViewModel(), TopStoryCellViewModel()]
             self?.delegate?.didReceiveData()
