@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
             layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
     }
-    private let viewModel = HomeViewModel()
+    private let viewModel = HomeViewModel(loader: RemoteTopStoriesLoader())
     private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {

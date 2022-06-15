@@ -15,7 +15,9 @@ protocol HomePageProtocol: AnyObject {
 class HomeViewModel {
     private var cells: [CellViewModelProtocol] = [EmptyCellViewModel()]
     weak var delegate: HomePageProtocol?
-    init() {
+    let loader: TopStoriesLoader
+    init(loader: TopStoriesLoader) {
+        self.loader = loader
         loadStories()
     }
     
@@ -28,11 +30,8 @@ class HomeViewModel {
     }
     
     func loadStories() {
-        cells = [LoadingIndicatorCellViewModel()]
-        delegate?.onLoadingData()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) { [weak self] in
-            self?.cells = [TopStoryCellViewModel(), TopStoryCellViewModel()]
-            self?.delegate?.didReceiveData()
-        }
+        loader.getTopStories(completion: { response in
+            
+        })
     }
 }
