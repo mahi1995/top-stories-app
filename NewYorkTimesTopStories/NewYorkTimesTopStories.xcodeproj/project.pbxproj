@@ -171,6 +171,7 @@
 		92A28249284EBEE30075F4C5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				92D35A5E285A118600838792 /* Models */,
 				928EC7E8285165B30039E811 /* Utils */,
 				92BAA64B2853E57300CCECF1 /* Networking */,
 				92A2828C284ED4BD0075F4C5 /* Home */,
@@ -218,11 +219,18 @@
 			isa = PBXGroup;
 			children = (
 				92BAA6482853DEF700CCECF1 /* TopStoriesAPI.swift */,
-				92BAA64C2853E5B300CCECF1 /* Response.swift */,
-				92BAA64F2853E5D900CCECF1 /* Article.swift */,
 				92D35A5B285A105D00838792 /* NYTEndpoint.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		92D35A5E285A118600838792 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92BAA64C2853E5B300CCECF1 /* Response.swift */,
+				92BAA64F2853E5D900CCECF1 /* Article.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
