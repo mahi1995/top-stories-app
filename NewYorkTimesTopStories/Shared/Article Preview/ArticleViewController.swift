@@ -14,7 +14,13 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var seeMoreLabel: UILabel!
+    @IBOutlet weak var seeMoreLabel: UILabel! {
+        didSet {
+            seeMoreLabel.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target:self,action:#selector(onTapSeeMoreLabel))
+            seeMoreLabel.addGestureRecognizer(tapGesture)
+        }
+    }
     let viewModel: ArticleViewModel
     
     override func viewDidLoad() {
@@ -46,5 +52,9 @@ class ArticleViewController: UIViewController {
             imageView.loadImage(from: url) { _ in }
         }
         seeMoreLabel.attributedText = viewModel.seeMoreAttributedString
+    }
+    
+    @objc func onTapSeeMoreLabel() {
+        print("~~ tapped")
     }
 }
