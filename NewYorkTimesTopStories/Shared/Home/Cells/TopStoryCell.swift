@@ -38,7 +38,8 @@ class TopStoryCell: UICollectionViewCell, CellProtocol {
         if let urlString = viewModel.imageURL, let url = URL(string: urlString) {
             setupImage(with: url)
         } else {
-            imageView.image = UIImage(named: "image_placeholder")
+            imageView.image = UIImage(named: "placeholder_image")
+            imageView.contentMode = .scaleToFill
         }
     }
     
