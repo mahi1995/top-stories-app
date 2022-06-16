@@ -36,5 +36,14 @@ class ArticleViewController: UIViewController {
         descriptionLabel.text = viewModel.description
         authorLabel.text = viewModel.author
         dateLabel.text = viewModel.date
+        if let image = viewModel.image {
+            imageView.image = image
+        } else {
+            guard let urlString = viewModel.imageURL, let url = URL(string: urlString) else {
+                imageView.image = UIImage(named: "placeholder_image")
+                return
+            }
+            imageView.loadImage(from: url) { _ in }
+        }
     }
 }

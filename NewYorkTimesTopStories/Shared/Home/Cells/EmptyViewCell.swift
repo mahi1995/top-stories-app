@@ -10,6 +10,7 @@ import UIKit
 class EmptyViewCell: UICollectionViewCell, CellProtocol {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var informationLabel: UILabel!
+    weak var delegate: HomeCellDelegate?
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         return CGSize(width: self.superview?.frame.width ?? containerView.frame.width,

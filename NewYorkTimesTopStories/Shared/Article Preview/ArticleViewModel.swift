@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ArticleViewModel {
     private let article: ArticleDetail
@@ -38,5 +39,12 @@ class ArticleViewModel {
         return "Published on \(month) \(components.day!), \(components.year!)"
     }
     
+    var image: UIImage? {
+        return article.image
+    }
+    
+    var imageURL: String? {
+        return article.imageUrl
+    }
     
 }

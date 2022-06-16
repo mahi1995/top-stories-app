@@ -46,7 +46,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellViewModel = viewModel.itemAt(indexPath: indexPath)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellViewModel.cellType.identifier, for: indexPath)
-        if let cell = cell as? CellProtocol {
+        if var cell = cell as? CellProtocol {
+            cell.delegate = self
             cell.configure(with: cellViewModel)
         }
         return cell
@@ -71,5 +72,10 @@ extension HomeViewController: HomePageProtocol {
             self.collectionView.reloadData()
         }
     }
-    
+}
+
+extension HomeViewController: HomeCellDelegate {
+    func onFinishImageDownload(image: UIImage, url: URL) {
+        viewModel.updateCells(with: image, url: url)
+    }
 }

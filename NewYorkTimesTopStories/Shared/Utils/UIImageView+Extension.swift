@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImageView {
-    func loadImage(from url: URL) {
+    func loadImage(from url: URL, completion: @escaping (_ image: UIImage?) -> ()) {
         let activityIndicator = UIActivityIndicatorView(style: .medium)
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         activityIndicator.hidesWhenStopped = true
@@ -34,6 +34,7 @@ extension UIImageView {
             self.image = image
             self.contentMode = .scaleAspectFill
             activityIndicator.stopAnimating()
+            completion(image)
         }
     }
 }

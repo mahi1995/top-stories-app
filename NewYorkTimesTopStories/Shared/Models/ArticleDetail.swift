@@ -12,6 +12,7 @@ struct ArticleDetail {
     var title: String
     var description: String
     var imageUrl: String?
+    var image: UIImage?
     var author: String
     var publishDate: String
     var url: String

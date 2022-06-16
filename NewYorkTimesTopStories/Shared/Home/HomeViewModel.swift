@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomePageProtocol: AnyObject {
     func onLoadingData()
@@ -51,11 +52,31 @@ class HomeViewModel {
     
     func getArticleDetail(at indexPath: IndexPath) -> ArticleDetail {
         let article = self.articles[indexPath.row]
+        let image = (self.cells[indexPath.row] as? TopStoryCellViewModel)?.image
         return ArticleDetail(title: article.title,
                              description: article.description,
                              imageUrl: article.multimedia?.first?.url,
+                             image: image,
                              author: article.author,
                              publishDate: article.publishingDate,
                              url: article.url)
+    }
+    
+    func updateCells(with image: UIImage, url: URL) {
+        let urlString = url.absoluteString
+        guard let cellViewModels = cells as? [TopStoryCellViewModel] else { return }
+        var updatedCellViewModels: [TopStoryCellViewModel] = []
+        for cell in cellViewModels {
+            if cell.imageURL == urlString {
+                let topStoryCellViewModel = TopStoryCellViewModel(imageURL: cell.imageURL,
+                                                                  title: cell.title,
+                                                                  author: cell.author,
+                                                                  image: image)
+                updatedCellViewModels.append(topStoryCellViewModel)
+            } else {
+                updatedCellViewModels.append(cell)
+            }
+        }
+        self.cells = updatedCellViewModels
     }
 }

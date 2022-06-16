@@ -5,11 +5,18 @@
 //  Created by Mahika on 08/06/2022.
 //
 
+import UIKit
+
 protocol CellViewModelProtocol {
     var cellType: CellType { get }
 }
 
+protocol HomeCellDelegate: AnyObject {
+    func onFinishImageDownload(image: UIImage, url: URL)
+}
+
 protocol CellProtocol {
+    var delegate: HomeCellDelegate? { set get }
     func configure(with viewModel: CellViewModelProtocol)
 }
 
