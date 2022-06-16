@@ -14,7 +14,7 @@
                 <outlet property="dateLabel" destination="abC-L6-DiZ" id="H9J-G0-BMT"/>
                 <outlet property="descriptionLabel" destination="SSF-cf-5rm" id="bua-GE-euJ"/>
                 <outlet property="imageView" destination="sn5-ap-k3M" id="v36-fI-l8I"/>
-                <outlet property="seeMoreButton" destination="NKp-EI-N3m" id="k3f-K3-oi7"/>
+                <outlet property="seeMoreLabel" destination="aBN-Od-vvu" id="GOu-iD-0U8"/>
                 <outlet property="titleLabel" destination="f3c-VK-E1b" id="Phe-C3-1HE"/>
                 <outlet property="view" destination="R9n-Ym-Kcf" id="enJ-rU-wK9"/>
             </connections>
@@ -82,22 +82,12 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKp-EI-N3m">
-                    <rect key="frame" x="16" y="549.5" width="382" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="oVn-nm-9Xv"/>
-                    </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="See More"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="8"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBN-Od-vvu" userLabel="See More Label">
+                    <rect key="frame" x="16" y="541.5" width="382" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Obw-0O-ZoX"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,19 +98,19 @@
                 <constraint firstItem="sn5-ap-k3M" firstAttribute="top" secondItem="SSF-cf-5rm" secondAttribute="bottom" constant="15" id="54f-Cx-a8f"/>
                 <constraint firstItem="f3c-VK-E1b" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="CGs-t6-HFb"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="abC-L6-DiZ" secondAttribute="trailing" constant="16" id="COC-pa-hKm"/>
+                <constraint firstItem="aBN-Od-vvu" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="GAE-wq-Pbc"/>
+                <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="aBN-Od-vvu" secondAttribute="trailing" constant="16" id="LYs-Se-9eg"/>
                 <constraint firstItem="f3c-VK-E1b" firstAttribute="top" secondItem="cbc-Gn-Ffd" secondAttribute="bottom" constant="39" id="MNn-Pw-LHM"/>
                 <constraint firstItem="sn5-ap-k3M" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" id="R8r-ef-lsX"/>
+                <constraint firstItem="aBN-Od-vvu" firstAttribute="top" secondItem="abC-L6-DiZ" secondAttribute="bottom" constant="8" id="U2L-mW-k0a"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="cbc-Gn-Ffd" secondAttribute="trailing" id="V3n-nH-dyw"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="f3c-VK-E1b" secondAttribute="trailing" constant="16" id="aqE-dd-Tgg"/>
                 <constraint firstItem="cbc-Gn-Ffd" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" id="bvm-gc-Ilw"/>
                 <constraint firstItem="abC-L6-DiZ" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="dKe-BG-aTE"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="WDc-fp-OET" secondAttribute="trailing" constant="16" id="eyj-cw-PXi"/>
                 <constraint firstItem="abC-L6-DiZ" firstAttribute="top" secondItem="WDc-fp-OET" secondAttribute="bottom" constant="8" id="ieN-zP-W9T"/>
-                <constraint firstItem="NKp-EI-N3m" firstAttribute="top" secondItem="abC-L6-DiZ" secondAttribute="bottom" constant="16" id="pJB-bA-bdc"/>
                 <constraint firstItem="SSF-cf-5rm" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="pcZ-aL-coc"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="SSF-cf-5rm" secondAttribute="trailing" constant="16" id="pl0-Ox-iEY"/>
-                <constraint firstItem="NKp-EI-N3m" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="qYi-BD-pJb"/>
-                <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="NKp-EI-N3m" secondAttribute="trailing" constant="16" id="r7r-zS-Igk"/>
                 <constraint firstItem="WDc-fp-OET" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="yJB-uo-l3n"/>
                 <constraint firstItem="WDc-fp-OET" firstAttribute="top" secondItem="sn5-ap-k3M" secondAttribute="bottom" constant="16" id="zAE-lH-Nxl"/>
             </constraints>

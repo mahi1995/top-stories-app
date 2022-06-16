@@ -47,4 +47,11 @@ class ArticleViewModel {
         return article.imageUrl
     }
     
+    var seeMoreAttributedString: NSAttributedString {
+        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue,
+                                  NSAttributedString.Key.foregroundColor: UIColor.blue] as [NSAttributedString.Key : Any]
+        let underlineAttributedString = NSAttributedString(string: "See More", attributes: underlineAttribute)
+        return underlineAttributedString
+    }
+    
 }

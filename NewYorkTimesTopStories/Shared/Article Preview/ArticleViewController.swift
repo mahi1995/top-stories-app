@@ -14,7 +14,7 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var seeMoreButton: UIButton!
+    @IBOutlet weak var seeMoreLabel: UILabel!
     let viewModel: ArticleViewModel
     
     override func viewDidLoad() {
@@ -45,5 +45,6 @@ class ArticleViewController: UIViewController {
             }
             imageView.loadImage(from: url) { _ in }
         }
+        seeMoreLabel.attributedText = viewModel.seeMoreAttributedString
     }
 }
