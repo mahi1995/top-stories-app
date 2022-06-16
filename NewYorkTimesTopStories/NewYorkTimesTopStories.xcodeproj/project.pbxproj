@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		92275CD7285B228600E930FC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CD6285B228600E930FC /* UIImageView+Extension.swift */; };
 		92275CD9285B22B700E930FC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CD8285B22B700E930FC /* UIImage+Extension.swift */; };
+		92275CDC285B306F00E930FC /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CDB285B306F00E930FC /* ArticleViewController.swift */; };
+		92275CDE285B30A900E930FC /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92275CDD285B30A900E930FC /* ArticleViewController.xib */; };
+		92275CE1285B371600E930FC /* ArticleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CE0285B371600E930FC /* ArticleCoordinator.swift */; };
+		92275CE3285B3CC300E930FC /* ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CE2285B3CC300E930FC /* ArticleDetail.swift */; };
+		92275CE5285B407700E930FC /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CE4285B407700E930FC /* ArticleViewModel.swift */; };
 		92870E9A285ADCDB00FCCD09 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92870E99285ADCDB00FCCD09 /* Multimedia.swift */; };
 		92870E9B285ADCDB00FCCD09 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92870E99285ADCDB00FCCD09 /* Multimedia.swift */; };
 		928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7DC2851350D0039E811 /* EmptyViewCell.swift */; };
@@ -69,6 +74,11 @@
 /* Begin PBXFileReference section */
 		92275CD6285B228600E930FC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		92275CD8285B22B700E930FC /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		92275CDB285B306F00E930FC /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		92275CDD285B30A900E930FC /* ArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
+		92275CE0285B371600E930FC /* ArticleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCoordinator.swift; sourceTree = "<group>"; };
+		92275CE2285B3CC300E930FC /* ArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetail.swift; sourceTree = "<group>"; };
+		92275CE4285B407700E930FC /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		92870E99285ADCDB00FCCD09 /* Multimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multimedia.swift; sourceTree = "<group>"; };
 		928EC7DC2851350D0039E811 /* EmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewCell.swift; sourceTree = "<group>"; };
 		928EC7DE285135430039E811 /* EmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewCell.xib; sourceTree = "<group>"; };
@@ -133,11 +143,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		92275CDA285B2DBA00E930FC /* New Group */ = {
+		92275CDA285B2DBA00E930FC /* Article Preview */ = {
 			isa = PBXGroup;
 			children = (
+				92275CDB285B306F00E930FC /* ArticleViewController.swift */,
+				92275CDD285B30A900E930FC /* ArticleViewController.xib */,
+				92275CE4285B407700E930FC /* ArticleViewModel.swift */,
 			);
-			path = "New Group";
+			path = "Article Preview";
+			sourceTree = "<group>";
+		};
+		92275CDF285B370500E930FC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				92275CE0285B371600E930FC /* ArticleCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		928EC7DB285135010039E811 /* Cells */ = {
@@ -187,7 +208,8 @@
 		92A28249284EBEE30075F4C5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				92275CDA285B2DBA00E930FC /* New Group */,
+				92275CDF285B370500E930FC /* Coordinator */,
+				92275CDA285B2DBA00E930FC /* Article Preview */,
 				92D35A5E285A118600838792 /* Models */,
 				928EC7E8285165B30039E811 /* Utils */,
 				92BAA64B2853E57300CCECF1 /* Networking */,
@@ -247,6 +269,7 @@
 				92BAA64C2853E5B300CCECF1 /* TopStoriesResult.swift */,
 				92BAA64F2853E5D900CCECF1 /* Article.swift */,
 				92870E99285ADCDB00FCCD09 /* Multimedia.swift */,
+				92275CE2285B3CC300E930FC /* ArticleDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A28276284EBEE50075F4C5 /* Assets.xcassets in Resources */,
+				92275CDE285B30A900E930FC /* ArticleViewController.xib in Resources */,
 				928EC7E7285149250039E811 /* TopStoryCell.xib in Resources */,
 				92A2828E284ED4E10075F4C5 /* HomeViewController.xib in Resources */,
 				928EC7F12851BBB50039E811 /* LoadingIndicatorCell.xib in Resources */,
@@ -417,12 +441,16 @@
 				928EC7EC285167100039E811 /* UIView+Extension.swift in Sources */,
 				92A28287284ED3690075F4C5 /* HomePage.swift in Sources */,
 				928EC7EE285168040039E811 /* TopStoryCellViewModel.swift in Sources */,
+				92275CE5285B407700E930FC /* ArticleViewModel.swift in Sources */,
 				92870E9A285ADCDB00FCCD09 /* Multimedia.swift in Sources */,
 				928EC7E128513D830039E811 /* EmptyCellViewModel.swift in Sources */,
+				92275CDC285B306F00E930FC /* ArticleViewController.swift in Sources */,
+				92275CE1285B371600E930FC /* ArticleCoordinator.swift in Sources */,
 				928EC7E5285148E10039E811 /* TopStoryCell.swift in Sources */,
 				928EC7F52851BE4B0039E811 /* LoadingIndicatorCellViewModel.swift in Sources */,
 				928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */,
 				92A28274284EBEE50075F4C5 /* ContentView.swift in Sources */,
+				92275CE3285B3CC300E930FC /* ArticleDetail.swift in Sources */,
 				92BAA64D2853E5B300CCECF1 /* TopStoriesResult.swift in Sources */,
 				92275CD7285B228600E930FC /* UIImageView+Extension.swift in Sources */,
 				92BAA6492853DEF700CCECF1 /* TopStoriesAPI.swift in Sources */,

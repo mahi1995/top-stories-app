@@ -9,6 +9,8 @@ struct Article: Codable {
     var url: String
     var title: String
     var author: String
+    var description: String
+    var publishingDate: String
     var multimedia: [Multimedia]?
     
     enum CodingKeys: String, CodingKey {
@@ -16,6 +18,8 @@ struct Article: Codable {
         case title
         case author = "byline"
         case multimedia
+        case description = "abstract"
+        case publishingDate = "published_date"
     }
     
     init(from decoder: Decoder) throws {
@@ -23,6 +27,8 @@ struct Article: Codable {
         url = try container.decode(String.self, forKey: .url)
         title = try container.decode(String.self, forKey: .title)
         author = try container.decode(String.self, forKey: .author)
+        description = try container.decode(String.self, forKey: .description)
         multimedia = try container.decode([Multimedia]?.self, forKey: .multimedia)
+        publishingDate = try container.decode(String.self, forKey: .publishingDate)
     }
 }

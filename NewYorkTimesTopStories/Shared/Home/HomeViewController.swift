@@ -53,7 +53,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cellViewModel: \(viewModel.itemAt(indexPath: indexPath) as? TopStoryCellViewModel)")
+        let article = viewModel.getArticleDetail(at: indexPath)
+        ArticleCoordinator(viewController: self).presentViewController(with: article)
     }
     
 }
