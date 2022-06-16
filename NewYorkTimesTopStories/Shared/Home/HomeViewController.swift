@@ -34,15 +34,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func handleRefresh(refreshControl: UIRefreshControl) {
-        DispatchQueue.global().async {
-            // Fake background loading task
-            sleep(2)
-            // Refresh the data here
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-                refreshControl.endRefreshing()
-            }
-        }
+        viewModel.loadStories()
     }
 }
 
@@ -53,7 +45,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellViewModel = viewModel.itemAt(indexPath: indexPath)
-        return collectionView.dequeueReusableCell(withReuseIdentifier: cellViewModel.cellType.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellViewModel.cellType.identifier, for: indexPath)
+        if let cell = cell as? CellProtocol {
+            cell.configure(with: cellViewModel)
+        }
+        return cell
     }
     
 }

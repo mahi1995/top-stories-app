@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoadingIndicatorCell: UICollectionViewCell {
+class LoadingIndicatorCell: UICollectionViewCell, CellProtocol {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
@@ -24,4 +24,6 @@ class LoadingIndicatorCell: UICollectionViewCell {
     deinit {
         loadingIndicator.stopAnimating()
     }
+    
+    func configure(with viewModel: CellViewModelProtocol) {}
 }

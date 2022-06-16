@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92275CD7285B228600E930FC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CD6285B228600E930FC /* UIImageView+Extension.swift */; };
+		92275CD9285B22B700E930FC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92275CD8285B22B700E930FC /* UIImage+Extension.swift */; };
 		92870E9A285ADCDB00FCCD09 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92870E99285ADCDB00FCCD09 /* Multimedia.swift */; };
 		92870E9B285ADCDB00FCCD09 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92870E99285ADCDB00FCCD09 /* Multimedia.swift */; };
 		928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928EC7DC2851350D0039E811 /* EmptyViewCell.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92275CD6285B228600E930FC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		92275CD8285B22B700E930FC /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		92870E99285ADCDB00FCCD09 /* Multimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multimedia.swift; sourceTree = "<group>"; };
 		928EC7DC2851350D0039E811 /* EmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewCell.swift; sourceTree = "<group>"; };
 		928EC7DE285135430039E811 /* EmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewCell.xib; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			children = (
 				928EC7E9285165C40039E811 /* UIColor+Extension.swift */,
 				928EC7EB285167100039E811 /* UIView+Extension.swift */,
+				92275CD6285B228600E930FC /* UIImageView+Extension.swift */,
+				92275CD8285B22B700E930FC /* UIImage+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -410,10 +416,12 @@
 				928EC7DD2851350D0039E811 /* EmptyViewCell.swift in Sources */,
 				92A28274284EBEE50075F4C5 /* ContentView.swift in Sources */,
 				92BAA64D2853E5B300CCECF1 /* TopStoriesResult.swift in Sources */,
+				92275CD7285B228600E930FC /* UIImageView+Extension.swift in Sources */,
 				92BAA6492853DEF700CCECF1 /* TopStoriesAPI.swift in Sources */,
 				92A28272284EBEE50075F4C5 /* NewYorkTimesTopStoriesApp.swift in Sources */,
 				92D0C93128505ED900543A3D /* HomeViewModel.swift in Sources */,
 				92D35A5C285A105D00838792 /* NYTEndpoint.swift in Sources */,
+				92275CD9285B22B700E930FC /* UIImage+Extension.swift in Sources */,
 				928EC7E3285147200039E811 /* Home.swift in Sources */,
 				92A2828A284ED39F0075F4C5 /* HomeViewController.swift in Sources */,
 				92BAA6502853E5D900CCECF1 /* Article.swift in Sources */,

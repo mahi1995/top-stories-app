@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TopStoryCell: UICollectionViewCell {
+class TopStoryCell: UICollectionViewCell, CellProtocol {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -25,5 +25,24 @@ class TopStoryCell: UICollectionViewCell {
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor.grey60.cgColor
         cardView.renderShadow()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+    }
+    func configure(with viewModel: CellViewModelProtocol) {
+        guard let viewModel = viewModel as? TopStoryCellViewModel else { return }
+        titleLabel.text = viewModel.title
+        authorLabel.text = viewModel.author
+        if let urlString = viewModel.imageURL, let url = URL(string: urlString) {
+            setupImage(with: url)
+        } else {
+            imageView.image = UIImage(named: "image_placeholder")
+        }
+    }
+    
+    func setupImage(with link: URL) {
+        imageView.loadImage(from: link)
     }
 }

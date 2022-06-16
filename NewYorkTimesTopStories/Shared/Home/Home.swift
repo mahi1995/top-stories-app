@@ -9,6 +9,10 @@ protocol CellViewModelProtocol {
     var cellType: CellType { get }
 }
 
+protocol CellProtocol {
+    func configure(with viewModel: CellViewModelProtocol)
+}
+
 enum CellType: String, CaseIterable {
     case story = "storyCell"
     case empty = "emptyCell"
