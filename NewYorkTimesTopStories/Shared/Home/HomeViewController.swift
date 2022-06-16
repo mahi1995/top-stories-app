@@ -52,6 +52,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("cellViewModel: \(viewModel.itemAt(indexPath: indexPath) as? TopStoryCellViewModel)")
+    }
+    
 }
 
 extension HomeViewController: HomePageProtocol {

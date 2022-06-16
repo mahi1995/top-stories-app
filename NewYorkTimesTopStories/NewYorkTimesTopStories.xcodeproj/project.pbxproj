@@ -133,6 +133,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92275CDA285B2DBA00E930FC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		928EC7DB285135010039E811 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +187,7 @@
 		92A28249284EBEE30075F4C5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				92275CDA285B2DBA00E930FC /* New Group */,
 				92D35A5E285A118600838792 /* Models */,
 				928EC7E8285165B30039E811 /* Utils */,
 				92BAA64B2853E57300CCECF1 /* Networking */,
