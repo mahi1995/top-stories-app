@@ -7,4 +7,5 @@
 
 struct EmptyCellViewModel: CellViewModelProtocol {
     var cellType: CellType = .empty
+    var informationMessage: String
 }

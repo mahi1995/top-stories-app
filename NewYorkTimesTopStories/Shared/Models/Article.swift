@@ -9,7 +9,7 @@ struct Article: Codable {
     var url: String
     var title: String
     var author: String
-    var multimedia: [Multimedia]
+    var multimedia: [Multimedia]?
     
     enum CodingKeys: String, CodingKey {
         case url
@@ -17,10 +17,12 @@ struct Article: Codable {
         case author = "byline"
         case multimedia
     }
-}
-
-struct Multimedia: Codable {
-    var url: String
-    var width: Float
-    var height: Float
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        url = try container.decode(String.self, forKey: .url)
+        title = try container.decode(String.self, forKey: .title)
+        author = try container.decode(String.self, forKey: .author)
+        multimedia = try container.decode([Multimedia]?.self, forKey: .multimedia)
+    }
 }

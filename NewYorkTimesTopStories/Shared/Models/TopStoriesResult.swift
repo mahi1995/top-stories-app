@@ -1,5 +1,5 @@
 //
-//  Response.swift
+//  TopStoriesResult.swift
 //  NewYorkTimesTopStories
 //
 //  Created by Mahika on 10/06/2022.

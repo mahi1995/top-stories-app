@@ -13,7 +13,7 @@ protocol HomePageProtocol: AnyObject {
 }
 
 class HomeViewModel {
-    private var cells: [CellViewModelProtocol] = [EmptyCellViewModel()]
+    private var cells: [CellViewModelProtocol] = [EmptyCellViewModel(informationMessage: "")]
     weak var delegate: HomePageProtocol?
     let loader: TopStoriesLoader
     init(loader: TopStoriesLoader) {
@@ -31,7 +31,19 @@ class HomeViewModel {
     
     func loadStories() {
         loader.getTopStories(completion: { response in
-            
+            switch response {
+            case .success(let response):
+                let articles = response.articles.map {
+                    TopStoryCellViewModel(imageURL: $0.multimedia?.first?.url,
+                                          title: $0.title,
+                                          author: $0.author)
+                }
+                self.cells = articles
+                self.delegate?.didReceiveData()
+            case .failure(let failure):
+                self.cells = [EmptyCellViewModel(informationMessage: failure.localizedDescription)]
+                self.delegate?.didReceiveData()
+            }
         })
     }
 }

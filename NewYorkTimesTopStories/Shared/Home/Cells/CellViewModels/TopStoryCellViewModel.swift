@@ -7,4 +7,7 @@
 
 struct TopStoryCellViewModel: CellViewModelProtocol {
     var cellType: CellType = .story
+    let imageURL: String?
+    let title: String
+    let author: String
 }
