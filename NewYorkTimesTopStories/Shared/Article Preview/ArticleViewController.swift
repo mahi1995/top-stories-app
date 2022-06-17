@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ArticleViewController: UIViewController {
+class ArticleViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -16,6 +16,8 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var articlePreviewTextView: UITextView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var seeMoreLabel: UILabel! {
         didSet {
             seeMoreLabel.isUserInteractionEnabled = true
@@ -29,6 +31,11 @@ class ArticleViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         setupView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.delegate = self
     }
     
     init(viewModel: ArticleViewModel) {
