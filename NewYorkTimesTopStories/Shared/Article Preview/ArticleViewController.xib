@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="articlePreviewTextView" destination="De7-CC-FMQ" id="vgg-vh-gBf"/>
                 <outlet property="authorLabel" destination="mjV-i7-WKW" id="ENZ-qt-aGd"/>
+                <outlet property="backButton" destination="q8L-oI-tD1" id="s5E-Zh-Z0c"/>
                 <outlet property="contentView" destination="ohW-3T-cSi" id="0eN-zC-Oj9"/>
                 <outlet property="dateLabel" destination="TXw-WJ-AoK" id="LHy-g7-Ug2"/>
                 <outlet property="descriptionLabel" destination="5wA-yh-hPQ" id="WzC-az-jmV"/>
@@ -32,9 +33,9 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_york_times_full" translatesAutoresizingMaskIntoConstraints="NO" id="Ku1-Uy-EfM">
-                            <rect key="frame" x="87" y="10" width="240" height="30"/>
+                            <rect key="frame" x="132" y="10" width="150" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="240" id="KFm-jL-BtY"/>
+                                <constraint firstAttribute="width" constant="150" id="KFm-jL-BtY"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSS-Bt-ryz" userLabel="LineView">
@@ -44,15 +45,27 @@
                                 <constraint firstAttribute="height" constant="1" id="uez-Gt-W9P"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8L-oI-tD1">
+                            <rect key="frame" x="16" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Liu-IF-RN2"/>
+                                <constraint firstAttribute="width" constant="20" id="USf-QU-g5n"/>
+                            </constraints>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="Ku1-Uy-EfM" firstAttribute="centerX" secondItem="vEj-0l-4xh" secondAttribute="centerX" id="4dU-aY-VaK"/>
                         <constraint firstItem="Ku1-Uy-EfM" firstAttribute="top" secondItem="vEj-0l-4xh" secondAttribute="top" constant="10" id="FOV-KV-B5G"/>
                         <constraint firstAttribute="bottom" secondItem="Ku1-Uy-EfM" secondAttribute="bottom" constant="10" id="Flh-s3-v1r"/>
+                        <constraint firstItem="q8L-oI-tD1" firstAttribute="centerY" secondItem="vEj-0l-4xh" secondAttribute="centerY" id="Nl6-SR-jIr"/>
                         <constraint firstAttribute="height" constant="50" id="Soy-Wf-kQd"/>
                         <constraint firstAttribute="bottom" secondItem="oSS-Bt-ryz" secondAttribute="bottom" constant="1" id="eC0-Tn-SnE"/>
                         <constraint firstAttribute="trailing" secondItem="oSS-Bt-ryz" secondAttribute="trailing" id="fvJ-md-d0b"/>
                         <constraint firstItem="oSS-Bt-ryz" firstAttribute="leading" secondItem="vEj-0l-4xh" secondAttribute="leading" id="qMx-OC-2By"/>
+                        <constraint firstItem="q8L-oI-tD1" firstAttribute="leading" secondItem="vEj-0l-4xh" secondAttribute="leading" constant="16" id="yFz-T3-VOJ"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrP-8T-x1l">
@@ -164,6 +177,7 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="new_york_times_full" width="150" height="21"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
