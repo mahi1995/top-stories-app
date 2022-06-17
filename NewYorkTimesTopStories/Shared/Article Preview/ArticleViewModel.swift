@@ -8,11 +8,18 @@
 import Foundation
 import UIKit
 
+protocol ArticleDelegate: AnyObject {
+    func onReceivedData(with content: String)
+}
+
 class ArticleViewModel {
     private let article: ArticleDetail
+    private let loader: ArticleLoader
+    weak var delegate: ArticleDelegate?
     
-    init(article: ArticleDetail) {
+    init(article: ArticleDetail, loader: ArticleLoader) {
         self.article = article
+        self.loader = loader
     }
     
     var title: String {
@@ -56,6 +63,18 @@ class ArticleViewModel {
     
     var url: String {
         return article.url
+    }
+    
+    func fetchPreview() {
+        loader.getArticle(with: url) { [weak self] result in
+            switch result {
+            case .success(let response):
+                guard let content = response.documents.first?.leadParagraph else { return }
+                self?.delegate?.onReceivedData(with: content)
+            case .failure(let error):
+                print("\(error)")
+            }
+        }
     }
     
 }

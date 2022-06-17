@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleViewController">
             <connections>
+                <outlet property="articlePreviewTextView" destination="U6m-xb-7pE" id="of5-jq-0s0"/>
                 <outlet property="authorLabel" destination="WDc-fp-OET" id="Xg8-2J-YGx"/>
                 <outlet property="dateLabel" destination="abC-L6-DiZ" id="H9J-G0-BMT"/>
                 <outlet property="descriptionLabel" destination="SSF-cf-5rm" id="bua-GE-euJ"/>
@@ -89,6 +90,16 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U6m-xb-7pE" userLabel="Article Preview Text View">
+                    <rect key="frame" x="16" y="567.5" width="382" height="120"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="qfD-k9-5KG"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Bd7-Zt-5ow">
                     <rect key="frame" x="16" y="567.5" width="20" height="20"/>
                     <constraints>
@@ -109,7 +120,10 @@
                 <constraint firstItem="aBN-Od-vvu" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="GAE-wq-Pbc"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="aBN-Od-vvu" secondAttribute="trailing" constant="16" id="LYs-Se-9eg"/>
                 <constraint firstItem="f3c-VK-E1b" firstAttribute="top" secondItem="cbc-Gn-Ffd" secondAttribute="bottom" constant="39" id="MNn-Pw-LHM"/>
+                <constraint firstItem="U6m-xb-7pE" firstAttribute="top" secondItem="aBN-Od-vvu" secondAttribute="bottom" constant="10" id="Mc8-91-VEw"/>
+                <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="U6m-xb-7pE" secondAttribute="trailing" constant="16" id="Nbh-J6-Ci1"/>
                 <constraint firstItem="sn5-ap-k3M" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" id="R8r-ef-lsX"/>
+                <constraint firstItem="U6m-xb-7pE" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="Sra-Oc-2fP"/>
                 <constraint firstItem="aBN-Od-vvu" firstAttribute="top" secondItem="abC-L6-DiZ" secondAttribute="bottom" constant="8" id="U2L-mW-k0a"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="cbc-Gn-Ffd" secondAttribute="trailing" id="V3n-nH-dyw"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="f3c-VK-E1b" secondAttribute="trailing" constant="16" id="aqE-dd-Tgg"/>
@@ -129,6 +143,9 @@
     </objects>
     <resources>
         <image name="new_york_times_full" width="150" height="21"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

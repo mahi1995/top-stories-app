@@ -15,6 +15,7 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var articlePreviewTextView: UITextView!
     @IBOutlet weak var seeMoreLabel: UILabel! {
         didSet {
             seeMoreLabel.isUserInteractionEnabled = true
@@ -26,6 +27,7 @@ class ArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         setupView()
     }
     
@@ -59,8 +61,18 @@ class ArticleViewController: UIViewController {
     @objc func onTapSeeMoreLabel() {
         loadingIndicator.isHidden = false
         loadingIndicator.startAnimating()
-        RemoteArticleLoader().getArticle(with: viewModel.url) { _ in
-            
+        viewModel.fetchPreview()
+    }
+}
+
+extension ArticleViewController: ArticleDelegate {
+    func onReceivedData(with content: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingIndicator.stopAnimating()
+            self?.loadingIndicator.isHidden = true
+            self?.articlePreviewTextView.text = content
+            self?.seeMoreLabel.isUserInteractionEnabled = false
+            self?.seeMoreLabel.textColor = .grey60
         }
     }
 }

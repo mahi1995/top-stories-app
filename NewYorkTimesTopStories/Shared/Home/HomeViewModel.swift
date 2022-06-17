@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol HomePageProtocol: AnyObject {
+protocol HomePageDelegate: AnyObject {
     func onLoadingData()
     func didReceiveData()
 }
@@ -16,7 +16,7 @@ protocol HomePageProtocol: AnyObject {
 class HomeViewModel {
     private var cells: [CellViewModelProtocol] = [EmptyCellViewModel(informationMessage: "")]
     private var articles: [Article] = []
-    weak var delegate: HomePageProtocol?
+    weak var delegate: HomePageDelegate?
     let loader: TopStoriesLoader
     init(loader: TopStoriesLoader) {
         self.loader = loader

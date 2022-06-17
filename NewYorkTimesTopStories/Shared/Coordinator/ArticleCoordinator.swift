@@ -15,7 +15,7 @@ class ArticleCoordinator {
     }
     
     func presentViewController(with article: ArticleDetail) {
-        let viewModel = ArticleViewModel(article: article)
+        let viewModel = ArticleViewModel(article: article, loader: RemoteArticleLoader())
         let viewController = ArticleViewController(viewModel: viewModel)
         parentViewController.present(viewController, animated: true)
     }

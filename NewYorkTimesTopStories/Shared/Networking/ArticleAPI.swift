@@ -18,10 +18,10 @@ struct GetArticleParam {
 
 protocol ArticleLoader {
     typealias Result = Swift.Result<ArticleResult, Error>
-    func getTopStories(completion: @escaping (Result) -> Void)
+    func getArticle(with url: String, completion: @escaping (Result) -> Void)
 }
 
-struct RemoteArticleLoader {
+struct RemoteArticleLoader: ArticleLoader {
     func getArticle(with url: String, completion: @escaping (ArticleLoader.Result) -> Void) {
         let endpoint = NYTEndpoint.getArticle(GetArticleParam(webURL: url))
         URLSession.shared.dataTask(with: endpoint.httpRequest, completionHandler: { data, response, error in
