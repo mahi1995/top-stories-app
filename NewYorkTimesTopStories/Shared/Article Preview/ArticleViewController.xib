@@ -14,6 +14,7 @@
                 <outlet property="dateLabel" destination="abC-L6-DiZ" id="H9J-G0-BMT"/>
                 <outlet property="descriptionLabel" destination="SSF-cf-5rm" id="bua-GE-euJ"/>
                 <outlet property="imageView" destination="sn5-ap-k3M" id="v36-fI-l8I"/>
+                <outlet property="loadingIndicator" destination="Bd7-Zt-5ow" id="bI3-Az-6qA"/>
                 <outlet property="seeMoreLabel" destination="aBN-Od-vvu" id="GOu-iD-0U8"/>
                 <outlet property="titleLabel" destination="f3c-VK-E1b" id="Phe-C3-1HE"/>
                 <outlet property="view" destination="R9n-Ym-Kcf" id="enJ-rU-wK9"/>
@@ -88,6 +89,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Bd7-Zt-5ow">
+                    <rect key="frame" x="16" y="567.5" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="cU3-9f-iEn"/>
+                        <constraint firstAttribute="height" constant="20" id="jBf-sM-h71"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Obw-0O-ZoX"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,13 +116,15 @@
                 <constraint firstItem="cbc-Gn-Ffd" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" id="bvm-gc-Ilw"/>
                 <constraint firstItem="abC-L6-DiZ" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="dKe-BG-aTE"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="WDc-fp-OET" secondAttribute="trailing" constant="16" id="eyj-cw-PXi"/>
+                <constraint firstItem="Bd7-Zt-5ow" firstAttribute="top" secondItem="aBN-Od-vvu" secondAttribute="bottom" constant="10" id="gup-2T-hQq"/>
                 <constraint firstItem="abC-L6-DiZ" firstAttribute="top" secondItem="WDc-fp-OET" secondAttribute="bottom" constant="8" id="ieN-zP-W9T"/>
                 <constraint firstItem="SSF-cf-5rm" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="pcZ-aL-coc"/>
                 <constraint firstItem="Obw-0O-ZoX" firstAttribute="trailing" secondItem="SSF-cf-5rm" secondAttribute="trailing" constant="16" id="pl0-Ox-iEY"/>
+                <constraint firstItem="Bd7-Zt-5ow" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="tQ9-M8-vCM"/>
                 <constraint firstItem="WDc-fp-OET" firstAttribute="leading" secondItem="Obw-0O-ZoX" secondAttribute="leading" constant="16" id="yJB-uo-l3n"/>
                 <constraint firstItem="WDc-fp-OET" firstAttribute="top" secondItem="sn5-ap-k3M" secondAttribute="bottom" constant="16" id="zAE-lH-Nxl"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="49"/>
+            <point key="canvasLocation" x="137.68115942028987" y="48.883928571428569"/>
         </view>
     </objects>
     <resources>

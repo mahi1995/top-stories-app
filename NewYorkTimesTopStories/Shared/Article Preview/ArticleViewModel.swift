@@ -54,4 +54,8 @@ class ArticleViewModel {
         return underlineAttributedString
     }
     
+    var url: String {
+        return article.url
+    }
+    
 }

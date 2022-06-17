@@ -14,6 +14,7 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var seeMoreLabel: UILabel! {
         didSet {
             seeMoreLabel.isUserInteractionEnabled = true
@@ -42,6 +43,7 @@ class ArticleViewController: UIViewController {
         descriptionLabel.text = viewModel.description
         authorLabel.text = viewModel.author
         dateLabel.text = viewModel.date
+        loadingIndicator.isHidden = true
         if let image = viewModel.image {
             imageView.image = image
         } else {
@@ -55,6 +57,10 @@ class ArticleViewController: UIViewController {
     }
     
     @objc func onTapSeeMoreLabel() {
-        print("~~ tapped")
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
+        RemoteArticleLoader().getArticle(with: viewModel.url) { _ in
+            
+        }
     }
 }

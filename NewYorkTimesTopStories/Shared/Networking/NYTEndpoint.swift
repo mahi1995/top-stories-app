@@ -9,6 +9,7 @@ import Foundation
 
 enum NYTEndpoint {
     case getTopStories(GetTopStories)
+    case getArticle(GetArticleParam)
 }
 
 extension NYTEndpoint {
@@ -18,21 +19,31 @@ extension NYTEndpoint {
         switch self {
         case .getTopStories(let getTopStories):
             return "/svc/topstories/v2/\(getTopStories.section).json"
+        case .getArticle(_):
+            return "/svc/search/v2/articlesearch.json"
         }
     }
     
-    private var parameters: [String: Any] {
+    private var parameters: [String: String] {
         switch self {
         case .getTopStories(_):
             return ["api-key": apiKey]
+        case .getArticle(let param):
+            return ["fl": param.fl,
+                    "fq": param.encodedWebURLParam,
+                    "api-key": apiKey]
         }
     }
     
     private var requestURL: URL {
         var components = URLComponents(string: baseURL + path)
-        components?.queryItems = parameters.map { (key, value) in
-            URLQueryItem(name: key, value: "\(value)")
-        }
+        var characterSet = CharacterSet.urlQueryAllowed
+        characterSet.remove(":")
+        components?.percentEncodedQuery = parameters.map {
+            $0.addingPercentEncoding(withAllowedCharacters: characterSet)!
+            + "=" + $1.addingPercentEncoding(withAllowedCharacters: characterSet)!
+        }.joined(separator: "&")
+        
         return components?.url ?? URL(string: baseURL + path)!
     }
     
