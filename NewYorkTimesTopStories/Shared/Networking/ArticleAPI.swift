@@ -26,22 +26,22 @@ struct RemoteArticleLoader: ArticleLoader {
         let endpoint = NYTEndpoint.getArticle(GetArticleParam(webURL: url))
         URLSession.shared.dataTask(with: endpoint.httpRequest, completionHandler: { data, response, error in
             if error != nil {
-                completion(.failure(RemoteTopStoriesLoader.Error.connectivity))
+                completion(.failure(Error.connectivity))
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completion(.failure(RemoteTopStoriesLoader.Error.invalidData))
+                completion(.failure(Error.invalidData))
                 return
             }
             
             guard let data = data else {
-                completion(.failure(RemoteTopStoriesLoader.Error.invalidData))
+                completion(.failure(Error.invalidData))
                 return
             }
             
             guard let topStoriesResponse = try? JSONDecoder().decode(ArticleResult.self, from: data) else {
-                completion(.failure(RemoteTopStoriesLoader.Error.invalidData))
+                completion(.failure(Error.invalidData))
                 return
             }
             completion(.success(topStoriesResponse))

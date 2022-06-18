@@ -10,6 +10,7 @@ import UIKit
 
 protocol ArticleDelegate: AnyObject {
     func onReceivedData(with content: String)
+    func onErrorReturned(_ errorMessage: String)
 }
 
 class ArticleViewModel {
@@ -72,7 +73,7 @@ class ArticleViewModel {
                 guard let content = response.documents.first?.leadParagraph else { return }
                 self?.delegate?.onReceivedData(with: content)
             case .failure(let error):
-                print("\(error)")
+                self?.delegate?.onErrorReturned(error.errorDescription ?? Error.genericErrorDescription)
             }
         }
     }

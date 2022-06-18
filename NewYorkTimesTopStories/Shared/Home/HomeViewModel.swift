@@ -44,7 +44,7 @@ class HomeViewModel {
                 self.articles = response.articles
                 self.delegate?.didReceiveData()
             case .failure(let failure):
-                self.cells = [EmptyCellViewModel(informationMessage: failure.localizedDescription)]
+                self.cells = [EmptyCellViewModel(informationMessage: failure.errorDescription ?? Error.genericErrorDescription)]
                 self.delegate?.didReceiveData()
             }
         })

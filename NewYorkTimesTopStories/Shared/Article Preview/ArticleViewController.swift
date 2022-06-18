@@ -97,4 +97,14 @@ extension ArticleViewController: ArticleDelegate {
             self?.seeMoreLabel.textColor = .grey60
         }
     }
+    
+    func onErrorReturned(_ errorMessage: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingIndicator.stopAnimating()
+            self?.loadingIndicator.isHidden = true
+            self?.articlePreviewTextView.text = errorMessage
+            self?.seeMoreLabel.isUserInteractionEnabled = false
+            self?.seeMoreLabel.textColor = .grey60
+        }
+    }
 }
