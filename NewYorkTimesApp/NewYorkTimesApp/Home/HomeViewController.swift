@@ -55,7 +55,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let article = viewModel.getArticleDetail(at: indexPath)
-        ArticleCoordinator(viewController: self).presentViewController(with: article)
+        guard let navigationController = self.navigationController else { return }
+        ArticleCoordinator(navigationController: navigationController).pushViewController(with: article)
     }
     
 }

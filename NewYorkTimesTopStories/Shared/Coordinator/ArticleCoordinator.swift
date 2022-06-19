@@ -8,15 +8,15 @@
 import UIKit
 
 class ArticleCoordinator {
-    let parentViewController: UIViewController
+    let navigationController: UINavigationController
     
-    init(viewController: UIViewController){
-        parentViewController = viewController
+    init(navigationController: UINavigationController){
+        self.navigationController = navigationController
     }
     
-    func presentViewController(with article: ArticleDetail) {
+    func pushViewController(with article: ArticleDetail) {
         let viewModel = ArticleViewModel(article: article, loader: RemoteArticleLoader())
         let viewController = ArticleViewController(viewModel: viewModel)
-        parentViewController.present(viewController, animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
