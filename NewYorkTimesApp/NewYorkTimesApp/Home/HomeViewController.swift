@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: .valueChanged)
         collectionView.refreshControl = refreshControl
         viewModel.delegate = self
+        viewModel.loadStories()
     }
     
     @objc func handleRefresh(refreshControl: UIRefreshControl) {

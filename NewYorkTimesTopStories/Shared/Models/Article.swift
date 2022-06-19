@@ -31,4 +31,18 @@ struct Article: Codable {
         multimedia = try container.decode([Multimedia]?.self, forKey: .multimedia)
         publishingDate = try container.decode(String.self, forKey: .publishingDate)
     }
+    
+    init(url: String,
+         title: String,
+         author: String,
+         description: String,
+         publishingDate: String,
+         multimedia: [Multimedia]) {
+        self.url = url
+        self.title = title
+        self.author = author
+        self.description = description
+        self.publishingDate = publishingDate
+        self.multimedia = multimedia
+    }
 }

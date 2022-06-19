@@ -20,7 +20,6 @@ class HomeViewModel {
     let loader: TopStoriesLoader
     init(loader: TopStoriesLoader) {
         self.loader = loader
-        loadStories()
     }
     
     var cellCount: Int {
@@ -31,7 +30,7 @@ class HomeViewModel {
         return cells[indexPath.row]
     }
     
-    func loadStories() {
+    func loadStories(completion: @escaping (([CellViewModelProtocol]) -> Void) = { _ in }) {
         cells.append(LoadingIndicatorCellViewModel())
         loader.getTopStories(completion: { response in
             switch response {
@@ -44,9 +43,12 @@ class HomeViewModel {
                 self.cells = cellViewModels
                 self.articles = response.articles
                 self.delegate?.didReceiveData()
+                completion(cellViewModels)
             case .failure(let failure):
-                self.cells = [EmptyCellViewModel(informationMessage: failure.errorDescription ?? Error.genericErrorDescription)]
+                let cellViewModel = EmptyCellViewModel(informationMessage: failure.errorDescription ?? Error.genericErrorDescription)
+                self.cells = [cellViewModel]
                 self.delegate?.didReceiveData()
+                completion([cellViewModel])
             }
         })
     }
