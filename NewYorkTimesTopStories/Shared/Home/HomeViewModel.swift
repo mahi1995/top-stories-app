@@ -14,7 +14,7 @@ protocol HomePageDelegate: AnyObject {
 }
 
 class HomeViewModel {
-    private var cells: [CellViewModelProtocol] = [EmptyCellViewModel(informationMessage: "")]
+    private var cells: [CellViewModelProtocol] = []
     private var articles: [Article] = []
     weak var delegate: HomePageDelegate?
     let loader: TopStoriesLoader
@@ -32,6 +32,7 @@ class HomeViewModel {
     }
     
     func loadStories() {
+        cells.append(LoadingIndicatorCellViewModel())
         loader.getTopStories(completion: { response in
             switch response {
             case .success(let response):
