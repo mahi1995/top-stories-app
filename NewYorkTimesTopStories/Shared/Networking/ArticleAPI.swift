@@ -11,7 +11,7 @@ struct GetArticleParam {
     public let webURL: String
     public let fl: String = "lead_paragraph"
     
-    var encodedWebURLParam: String {
+    var webURLParam: String {
         return "web_url" + ":" + "\"\(webURL)\""
     }
 }

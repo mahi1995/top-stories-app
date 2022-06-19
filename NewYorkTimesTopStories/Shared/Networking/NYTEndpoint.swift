@@ -30,7 +30,7 @@ extension NYTEndpoint {
             return ["api-key": apiKey]
         case .getArticle(let param):
             return ["fl": param.fl,
-                    "fq": param.encodedWebURLParam,
+                    "fq": param.webURLParam,
                     "api-key": apiKey]
         }
     }

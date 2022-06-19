@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  NewYorkTimesApp
 //
-//  Created by ZALORA_USER on 18/06/2022.
+//  Created by Mahika on 18/06/2022.
 //
 
 import UIKit
