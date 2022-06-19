@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 @main
 struct NewYorkTimesTopStoriesApp: App {
+    @available(iOS 14.0, *)
     var body: some Scene {
         WindowGroup {
             ContentView()

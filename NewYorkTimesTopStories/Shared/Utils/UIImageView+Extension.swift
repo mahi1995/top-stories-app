@@ -9,7 +9,12 @@ import UIKit
 
 extension UIImageView {
     func loadImage(from url: URL, completion: @escaping (_ image: UIImage?) -> ()) {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
+        let activityIndicator = UIActivityIndicatorView()
+        if #available(iOS 13.0, *) {
+            activityIndicator.style = .medium
+        } else {
+            activityIndicator.style = .gray
+        }
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
