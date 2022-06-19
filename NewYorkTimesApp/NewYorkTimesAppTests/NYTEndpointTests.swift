@@ -28,12 +28,12 @@ class NYTEndpointTests: XCTestCase {
         XCTAssertEqual(endpoint.httpRequest.allHTTPHeaderFields, ["Accept": "application/json"])
         XCTAssertEqual(endpoint.httpRequest.url!.path, "/svc/search/v2/articlesearch.json")
         XCTAssertEqual(endpoint.httpRequest.httpMethod, "GET")
-        XCTAssertEqual(queries[0], "fl=lead_paragraph")
+        XCTAssertEqual(queries.first(where: { $0.contains("fl")}), "fl=lead_paragraph")
         
         var characterSet = CharacterSet.urlQueryAllowed
         characterSet.remove(":")
         let encodedArticleURL = param.webURLParam.addingPercentEncoding(withAllowedCharacters: characterSet)!
-        XCTAssertEqual(queries[1], "fq=\(encodedArticleURL)")
-        XCTAssertTrue(queries[2].contains("api-key="))
+        XCTAssertEqual(queries.first(where: { $0.contains("fq")}), "fq=\(encodedArticleURL)")
+        XCTAssertTrue(endpoint.httpRequest.url!.query!.contains("api-key="))
     }
 }
