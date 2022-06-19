@@ -119,7 +119,7 @@
                         <constraint firstItem="ohW-3T-cSi" firstAttribute="leading" secondItem="VrP-8T-x1l" secondAttribute="leading" id="VMX-fr-Wcw"/>
                         <constraint firstItem="ohW-3T-cSi" firstAttribute="height" secondItem="VrP-8T-x1l" secondAttribute="height" priority="250" id="VZp-Sk-xw9"/>
                         <constraint firstAttribute="trailing" secondItem="ohW-3T-cSi" secondAttribute="trailing" id="WG7-ae-Dzw"/>
-                        <constraint firstAttribute="bottom" secondItem="ohW-3T-cSi" secondAttribute="bottom" id="chm-OK-v20"/>
+                        <constraint firstAttribute="bottom" secondItem="ohW-3T-cSi" secondAttribute="bottom" constant="200" id="chm-OK-v20"/>
                     </constraints>
                 </scrollView>
             </subviews>
