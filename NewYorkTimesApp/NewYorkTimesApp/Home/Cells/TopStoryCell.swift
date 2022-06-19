@@ -17,7 +17,7 @@ class TopStoryCell: UICollectionViewCell, CellProtocol {
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         return CGSize(width: self.superview?.frame.width ?? containerView.frame.width,
-                      height: contentView.frame.height)
+                      height: 339)
     }
     
     override func awakeFromNib() {
