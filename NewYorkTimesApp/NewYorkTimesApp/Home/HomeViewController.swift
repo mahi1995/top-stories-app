@@ -65,6 +65,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 extension HomeViewController: HomePageDelegate {
     func didReceiveData() {
         DispatchQueue.main.async { [weak self] in
+            self?.collectionView.layoutIfNeeded()
             self?.collectionView.reloadData()
         }
     }
