@@ -23,12 +23,6 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var backButton: UIButton! {
-        didSet {
-            backButton.titleLabel?.text = ""
-            backButton.addTarget(self, action: #selector(onClickBackButton), for: .touchUpInside)
-        }
-    }
     @IBOutlet weak var seeMoreLabel: UILabel! {
         didSet {
             seeMoreLabel.isUserInteractionEnabled = true
@@ -81,10 +75,6 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
         loadingIndicator.isHidden = false
         loadingIndicator.startAnimating()
         viewModel.fetchPreview()
-    }
-    
-    @objc func onClickBackButton(sender: UIButton!) {
-        dismiss(animated: true, completion: nil)
     }
 }
 
