@@ -40,11 +40,12 @@ struct RemoteArticleLoader: ArticleLoader {
                 return
             }
             
-            guard let topStoriesResponse = try? JSONDecoder().decode(ArticleResult.self, from: data) else {
+            guard let articleSearchResponse = try? JSONDecoder().decode(ArticleResult.self, from: data) else {
                 completion(.failure(Error.invalidData))
                 return
             }
-            completion(.success(topStoriesResponse))
+            
+            completion(.success(articleSearchResponse))
         }).resume()
     }
 }

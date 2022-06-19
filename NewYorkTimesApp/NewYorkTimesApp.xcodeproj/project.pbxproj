@@ -48,6 +48,8 @@
 		92A63EE0285ED1FB006CE295 /* NYTEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A63EDF285ED1FB006CE295 /* NYTEndpointTests.swift */; };
 		92A63EE4285EEE56006CE295 /* MockTopStoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A63EE3285EEE56006CE295 /* MockTopStoriesLoader.swift */; };
 		92A63EE6285EF20A006CE295 /* HomePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A63EE5285EF20A006CE295 /* HomePageViewModelTests.swift */; };
+		92A63EE8285F0830006CE295 /* ArticleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A63EE7285F0830006CE295 /* ArticleViewModelTests.swift */; };
+		92A63EEA285F0A26006CE295 /* MockArticleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A63EE9285F0A26006CE295 /* MockArticleLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		92A63EDF285ED1FB006CE295 /* NYTEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTEndpointTests.swift; sourceTree = "<group>"; };
 		92A63EE3285EEE56006CE295 /* MockTopStoriesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTopStoriesLoader.swift; sourceTree = "<group>"; };
 		92A63EE5285EF20A006CE295 /* HomePageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelTests.swift; sourceTree = "<group>"; };
+		92A63EE7285F0830006CE295 /* ArticleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModelTests.swift; sourceTree = "<group>"; };
+		92A63EE9285F0A26006CE295 /* MockArticleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArticleLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 				92A63EDF285ED1FB006CE295 /* NYTEndpointTests.swift */,
 				92A63EE3285EEE56006CE295 /* MockTopStoriesLoader.swift */,
 				92A63EE5285EF20A006CE295 /* HomePageViewModelTests.swift */,
+				92A63EE7285F0830006CE295 /* ArticleViewModelTests.swift */,
+				92A63EE9285F0A26006CE295 /* MockArticleLoader.swift */,
 			);
 			path = NewYorkTimesAppTests;
 			sourceTree = "<group>";
@@ -457,8 +463,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A63EE8285F0830006CE295 /* ArticleViewModelTests.swift in Sources */,
 				92A63EE6285EF20A006CE295 /* HomePageViewModelTests.swift in Sources */,
 				92A63EE0285ED1FB006CE295 /* NYTEndpointTests.swift in Sources */,
+				92A63EEA285F0A26006CE295 /* MockArticleLoader.swift in Sources */,
 				92A63EE4285EEE56006CE295 /* MockTopStoriesLoader.swift in Sources */,
 				9223F3AC285DCC6B002AEEC6 /* NewYorkTimesAppTests.swift in Sources */,
 			);

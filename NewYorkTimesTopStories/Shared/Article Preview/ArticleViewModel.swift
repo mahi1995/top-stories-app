@@ -66,14 +66,22 @@ class ArticleViewModel {
         return article.url
     }
     
-    func fetchPreview() {
+    func fetchPreview(completion: @escaping ((String) -> Void) = { _ in }) {
         loader.getArticle(with: url) { [weak self] result in
             switch result {
             case .success(let response):
-                guard let content = response.documents.first?.leadParagraph else { return }
+                guard let content = response.documents.first?.leadParagraph else {
+                    let errorMessage = "Oops! There is no preview for this article."
+                    self?.delegate?.onErrorReturned(errorMessage)
+                    completion(errorMessage)
+                    return
+                }
                 self?.delegate?.onReceivedData(with: content)
+                completion(content)
             case .failure(let error):
-                self?.delegate?.onErrorReturned(error.errorDescription ?? Error.genericErrorDescription)
+                let errorMessage = error.errorDescription ?? Error.genericErrorDescription
+                self?.delegate?.onErrorReturned(errorMessage)
+                completion(errorMessage)
             }
         }
     }
