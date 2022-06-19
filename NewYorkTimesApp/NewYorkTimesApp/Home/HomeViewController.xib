@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,34 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-JY-SAX" userLabel="TitleView">
-                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sah-lk-X6g" userLabel="LineView">
-                            <rect key="frame" x="0.0" y="48" width="414" height="1"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="iNt-YD-T6M"/>
-                            </constraints>
-                        </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_york_times_full" translatesAutoresizingMaskIntoConstraints="NO" id="6x2-9a-tcZ">
-                            <rect key="frame" x="87" y="10" width="240" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="240" id="Osd-4x-feQ"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Sah-lk-X6g" secondAttribute="trailing" id="DQH-Zz-nkw"/>
-                        <constraint firstAttribute="height" constant="50" id="Ed7-7E-uqv"/>
-                        <constraint firstAttribute="bottom" secondItem="6x2-9a-tcZ" secondAttribute="bottom" constant="10" id="Rly-ek-izh"/>
-                        <constraint firstItem="6x2-9a-tcZ" firstAttribute="top" secondItem="Ssb-JY-SAX" secondAttribute="top" constant="10" id="cIc-32-TmD"/>
-                        <constraint firstAttribute="bottom" secondItem="Sah-lk-X6g" secondAttribute="bottom" constant="1" id="tY4-Rc-XaM"/>
-                        <constraint firstItem="Sah-lk-X6g" firstAttribute="leading" secondItem="Ssb-JY-SAX" secondAttribute="leading" id="xiJ-f1-6MA"/>
-                        <constraint firstItem="6x2-9a-tcZ" firstAttribute="centerX" secondItem="Ssb-JY-SAX" secondAttribute="centerX" id="yy0-yu-fvu"/>
-                    </constraints>
-                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="17P-8l-ySF">
                     <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,18 +35,14 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="bGE-Ty-OPk" firstAttribute="trailing" secondItem="17P-8l-ySF" secondAttribute="trailing" id="7xp-hO-KHB"/>
-                <constraint firstItem="Ssb-JY-SAX" firstAttribute="top" secondItem="bGE-Ty-OPk" secondAttribute="top" id="MKt-9W-qM3"/>
                 <constraint firstItem="17P-8l-ySF" firstAttribute="leading" secondItem="bGE-Ty-OPk" secondAttribute="leading" id="Qrm-Wl-pnh"/>
-                <constraint firstItem="17P-8l-ySF" firstAttribute="top" secondItem="Ssb-JY-SAX" secondAttribute="bottom" id="Uu7-gE-yKL"/>
-                <constraint firstItem="bGE-Ty-OPk" firstAttribute="trailing" secondItem="Ssb-JY-SAX" secondAttribute="trailing" id="aA6-Ur-ZX4"/>
-                <constraint firstItem="Ssb-JY-SAX" firstAttribute="leading" secondItem="bGE-Ty-OPk" secondAttribute="leading" id="vAB-rY-CsA"/>
+                <constraint firstItem="17P-8l-ySF" firstAttribute="top" secondItem="bGE-Ty-OPk" secondAttribute="bottom" constant="-768" id="Uu7-gE-yKL"/>
                 <constraint firstItem="bGE-Ty-OPk" firstAttribute="bottom" secondItem="17P-8l-ySF" secondAttribute="bottom" id="xWs-JU-MvR"/>
             </constraints>
             <point key="canvasLocation" x="175" y="32"/>
         </view>
     </objects>
     <resources>
-        <image name="new_york_times_full" width="150" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

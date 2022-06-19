@@ -59,6 +59,7 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupView() {
+        navigationItem.titleView = UIImageView(image: UIImage(named: "new_york_times_full"))
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
         authorLabel.text = viewModel.author
